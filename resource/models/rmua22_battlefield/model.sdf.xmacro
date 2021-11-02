@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+    <xmacro_define_block name="starting_zone_visual" params = "prefix pose sticker_uri">
+        <visual name="${prefix}starting_zone_visual">
+            <pose>${pose}</pose>
+            <geometry>
+                <plane>
+                    <normal>0 0 1</normal>
+                    <size>1.0 1.0</size>
+                </plane>
+            </geometry>
+            <material>
+                <diffuse>1.0 1.0 1.0</diffuse>
+                <pbr>
+                    <metal>
+                        <albedo_map>${sticker_uri}</albedo_map>
+                    </metal>
+                </pbr>
+            </material>
+        </visual>
+    </xmacro_define_block>
+    <model name='rmua22_battlefield'>
+        <pose>0 0 0.01 0 0 0</pose>
+        <static>1</static>
+        <link name="battlefield">
+            <collision name="ground_collision">
+                <geometry>
+                    <plane>
+                        <normal>0 0 1</normal>
+                        <size>8.5 5</size>
+                    </plane>
+                </geometry>
+            </collision>
+            <visual name="ground_visual">
+                <geometry>
+                    <plane>
+                        <normal>0 0 1</normal>
+                        <size>8.5 5</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1</ambient>
+                    <diffuse>0.2 0.2 0.2 1</diffuse>
+                </material>
+            </visual>
+            <collision name="wall_collision">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
+            </collision>
+			<visual name="wall_visual">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
+                <material>
+                    <ambient>0.5 0.5 0.5 1</ambient>
+                    <diffuse>0.5 0.5 0.5 1</diffuse>
+                </material>
+			</visual>
+            <collision name="obstacle_collision">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
+            </collision>
+			<visual name="obstacle_visual">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
+                <material>
+                    <ambient>0.8 0.8 0.8 1</ambient>
+                    <diffuse>0.8 0.8 0.8 1</diffuse>
+                </material>
+			</visual>
+            <collision name="outpost_collision">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
+            </collision>
+			<visual name="outpost_visual">
+				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
+                <material>
+                    <ambient>0 0 0 1</ambient>
+                    <diffuse>0 0 0 1</diffuse>
+                </material>
+			</visual>
+            <!--starting zone visual-->
+            <xmacro_block name="starting_zone_visual" prefix="red1_" pose="3.54 1.74 0.001 0 0 1.57" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_red.png"/>
+            <xmacro_block name="starting_zone_visual" prefix="red2_" pose="3.54 -1.74 0.001 0 0 1.57" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_red.png"/>
+            <xmacro_block name="starting_zone_visual" prefix="blue1_" pose="-3.54 -1.74 0.001 0 0 -1.57" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_blue.png"/>
+            <xmacro_block name="starting_zone_visual" prefix="blue2_" pose="-3.54 1.74 0.001 0 0 -1.57" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_blue.png"/>
+        </link>
+    </model>
+</sdf>
