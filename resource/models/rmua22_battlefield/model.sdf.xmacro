@@ -44,35 +44,35 @@
                 </material>
             </visual>
             <collision name="wall_collision">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
             </collision>
-			<visual name="wall_visual">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
+            <visual name="wall_visual">
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/wall.STL"/>
                 <material>
                     <ambient>0.5 0.5 0.5 1</ambient>
                     <diffuse>0.5 0.5 0.5 1</diffuse>
                 </material>
-			</visual>
+            </visual>
             <collision name="obstacle_collision">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
             </collision>
-			<visual name="obstacle_visual">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
+            <visual name="obstacle_visual">
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/obstacle_boxes.STL"/>
                 <material>
                     <ambient>0.8 0.8 0.8 1</ambient>
                     <diffuse>0.8 0.8 0.8 1</diffuse>
                 </material>
-			</visual>
+            </visual>
             <collision name="outpost_collision">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
             </collision>
-			<visual name="outpost_visual">
-				<xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
+            <visual name="outpost_visual">
+                <xmacro_block name="geometry_mesh" uri="model://rmua22_battlefield/meshes/outpost.STL"/>
                 <material>
                     <ambient>0 0 0 1</ambient>
                     <diffuse>0 0 0 1</diffuse>
                 </material>
-			</visual>
+            </visual>
             <!--starting zone visual-->
             <xmacro_block name="starting_zone_visual" prefix="red1_" pose="3.54 1.74 0.001 0 0 1.57" 
                 sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_red.png"/>
