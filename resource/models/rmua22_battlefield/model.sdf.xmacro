@@ -19,6 +19,25 @@
             </material>
         </visual>
     </xmacro_define_block>
+    <xmacro_define_block name="buff_zone_visual" params = "prefix pose sticker_uri">
+        <visual name="${prefix}buff_zone_visual">
+            <pose>${pose}</pose>
+            <geometry>
+                <plane>
+                    <normal>0 0 1</normal>
+                    <size>0.54 0.48</size>
+                </plane>
+            </geometry>
+            <material>
+                <diffuse>1.0 1.0 1.0</diffuse>
+                <pbr>
+                    <metal>
+                        <albedo_map>${sticker_uri}</albedo_map>
+                    </metal>
+                </pbr>
+            </material>
+        </visual>
+    </xmacro_define_block>
     <model name='rmua22_battlefield'>
         <pose>0 0 0.01 0 0 0</pose>
         <static>1</static>
@@ -82,6 +101,20 @@
                 sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_blue.png"/>
             <xmacro_block name="starting_zone_visual" prefix="blue2_" pose="-3.54 1.74 0.001 0 0 -1.57" 
                 sticker_uri="model://rmua22_battlefield/materials/textures/starting_zone_sticker_blue.png"/>
+	    <!--buff zone visual-->
+            <xmacro_block name="buff_zone_visual" prefix="F6_" pose="-3.54 0.55 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+	    <xmacro_block name="buff_zone_visual" prefix="F5_" pose="-2.14 -0.59 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+	    <xmacro_block name="buff_zone_visual" prefix="F4_" pose="0 1.795 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+	    <xmacro_block name="buff_zone_visual" prefix="F3_" pose="0 -1.795 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+	    <xmacro_block name="buff_zone_visual" prefix="F2_" pose="2.14 0.59 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+	    <xmacro_block name="buff_zone_visual" prefix="F1_" pose="3.54 -0.55 0.001 0 0 0" 
+                sticker_uri="model://rmua22_battlefield/materials/textures/buffer_zone_sticker.png"/>
+				
         </link>
     </model>
 </sdf>
