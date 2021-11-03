@@ -152,7 +152,7 @@
 				</material>
 			</visual>
 			<!--buff zone visual-->
-			<visual name="F6_starting_zone_visual">
+			<visual name="F6_buff_zone_visual">
 				<pose>-3.54 0.55 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -169,7 +169,7 @@
 					</pbr>
 				</material>
 			</visual>
-			<visual name="F5_starting_zone_visual">
+			<visual name="F5_buff_zone_visual">
 				<pose>-2.14 -0.59 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -186,7 +186,7 @@
 					</pbr>
 				</material>
 			</visual>
-			<visual name="F4_starting_zone_visual">
+			<visual name="F4_buff_zone_visual">
 				<pose>0 1.795 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -203,7 +203,7 @@
 					</pbr>
 				</material>
 			</visual>
-			<visual name="F3_starting_zone_visual">
+			<visual name="F3_buff_zone_visual">
 				<pose>0 -1.795 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -220,7 +220,7 @@
 					</pbr>
 				</material>
 			</visual>
-			<visual name="F2_starting_zone_visual">
+			<visual name="F2_buff_zone_visual">
 				<pose>2.14 0.59 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -237,7 +237,7 @@
 					</pbr>
 				</material>
 			</visual>
-			<visual name="F1_starting_zone_visual">
+			<visual name="F1_buff_zone_visual">
 				<pose>3.54 -0.55 0.001 0 0 0</pose>
 				<geometry>
 					<plane>
@@ -257,4 +257,3 @@
 		</link>
 	</model>
 </sdf>
-
